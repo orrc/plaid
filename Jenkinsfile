@@ -2,6 +2,7 @@ pipeline {
   agent {
     docker {
       image 'mreichelt/android:28'
+      args '-v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
   stages {
